@@ -3,11 +3,17 @@
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('/changeLocal/{locale}', function ($locale) {
+   App::setLocale($locale);
+   return back();
+})->name('changeLocal');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
