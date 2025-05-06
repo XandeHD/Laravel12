@@ -49,6 +49,5 @@
             <flux:link :href="route('register')" wire:navigate>{{ __('Sign up') }}</flux:link>
         </div>
     @endif
-    Teste
-    {{ __('love') }}
+    
 </div>

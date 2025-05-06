@@ -11,8 +11,8 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/changeLocal/{locale}', function ($locale) {
-   App::setLocale($locale);
-   return back();
+    App::setLocale($locale);
+    return back();
 })->name('changeLocal');
 
 Route::view('dashboard', 'dashboard')
